@@ -1,0 +1,246 @@
+<Activity mc:Ignorable="sap sap2010" x:Class="myntra" this:myntra.in_productName="firebolt square smart watch" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:mva="clr-namespace:Microsoft.VisualBasic.Activities;assembly=System.Activities" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=mscorlib" xmlns:sco="clr-namespace:System.Collections.ObjectModel;assembly=mscorlib" xmlns:this="clr-namespace:" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:uix="http://schemas.uipath.com/workflow/activities/uix" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+  <x:Members>
+    <x:Property Name="in_productName" Type="InArgument(x:String)" />
+    <x:Property Name="out_Name" Type="OutArgument(x:String)" />
+    <x:Property Name="out_Rating" Type="OutArgument(x:String)" />
+    <x:Property Name="out_Price" Type="OutArgument(x:String)" />
+    <x:Property Name="out_BrandName" Type="OutArgument(x:String)" />
+    <x:Property Name="out_BrandName2" Type="OutArgument(x:String)" />
+    <x:Property Name="out_Name2" Type="OutArgument(x:String)" />
+    <x:Property Name="out_Price2" Type="OutArgument(x:String)" />
+    <x:Property Name="out_Rating2" Type="OutArgument(x:String)" />
+  </x:Members>
+  <mva:VisualBasic.Settings>
+    <x:Null />
+  </mva:VisualBasic.Settings>
+  <sap:VirtualizedContainerService.HintSize>960,4707</sap:VirtualizedContainerService.HintSize>
+  <sap2010:WorkflowViewState.IdRef>myntra_1</sap2010:WorkflowViewState.IdRef>
+  <TextExpression.NamespacesForImplementation>
+    <sco:Collection x:TypeArguments="x:String">
+      <x:String>System.Activities</x:String>
+      <x:String>System.Activities.Statements</x:String>
+      <x:String>System.Activities.Expressions</x:String>
+      <x:String>System.Activities.Validation</x:String>
+      <x:String>System.Activities.XamlIntegration</x:String>
+      <x:String>Microsoft.VisualBasic</x:String>
+      <x:String>Microsoft.VisualBasic.Activities</x:String>
+      <x:String>System</x:String>
+      <x:String>System.Collections</x:String>
+      <x:String>System.Collections.Generic</x:String>
+      <x:String>System.Data</x:String>
+      <x:String>System.Diagnostics</x:String>
+      <x:String>System.Drawing</x:String>
+      <x:String>System.IO</x:String>
+      <x:String>System.Linq</x:String>
+      <x:String>System.Net.Mail</x:String>
+      <x:String>System.Xml</x:String>
+      <x:String>System.Xml.Linq</x:String>
+      <x:String>UiPath.Core</x:String>
+      <x:String>UiPath.Core.Activities</x:String>
+      <x:String>System.Windows.Markup</x:String>
+      <x:String>System.Collections.ObjectModel</x:String>
+      <x:String>System.ComponentModel</x:String>
+      <x:String>UiPath.UIAutomationNext.Enums</x:String>
+      <x:String>UiPath.UIAutomationCore.Contracts</x:String>
+      <x:String>System.Security</x:String>
+      <x:String>UiPath.UIAutomationNext.Contracts</x:String>
+      <x:String>System.Runtime.Serialization</x:String>
+      <x:String>UiPath.UIAutomationNext.Activities.Models</x:String>
+      <x:String>System.Activities.DynamicUpdate</x:String>
+      <x:String>UiPath.UIAutomationNext.Activities</x:String>
+      <x:String>UiPath.Platform.ObjectLibrary</x:String>
+      <x:String>UiPath.Shared.Activities</x:String>
+      <x:String>System.Runtime.InteropServices</x:String>
+      <x:String>System.Reflection</x:String>
+      <x:String>UiPath.Excel</x:String>
+      <x:String>UiPath.Excel.Activities</x:String>
+    </sco:Collection>
+  </TextExpression.NamespacesForImplementation>
+  <TextExpression.ReferencesForImplementation>
+    <sco:Collection x:TypeArguments="AssemblyReference">
+      <AssemblyReference>System.Activities</AssemblyReference>
+      <AssemblyReference>Microsoft.VisualBasic</AssemblyReference>
+      <AssemblyReference>mscorlib</AssemblyReference>
+      <AssemblyReference>System.Data</AssemblyReference>
+      <AssemblyReference>System.Data.DataSetExtensions</AssemblyReference>
+      <AssemblyReference>System</AssemblyReference>
+      <AssemblyReference>System.Drawing</AssemblyReference>
+      <AssemblyReference>System.Core</AssemblyReference>
+      <AssemblyReference>System.Xml</AssemblyReference>
+      <AssemblyReference>System.Xml.Linq</AssemblyReference>
+      <AssemblyReference>PresentationFramework</AssemblyReference>
+      <AssemblyReference>WindowsBase</AssemblyReference>
+      <AssemblyReference>PresentationCore</AssemblyReference>
+      <AssemblyReference>System.Xaml</AssemblyReference>
+      <AssemblyReference>UiPath.System.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.UiAutomation.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.UIAutomationNext</AssemblyReference>
+      <AssemblyReference>UiPath.UIAutomationCore</AssemblyReference>
+      <AssemblyReference>System.Runtime.Serialization</AssemblyReference>
+      <AssemblyReference>UiPath.UIAutomationNext.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.Platform</AssemblyReference>
+      <AssemblyReference>UiPath.Excel.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.Mail.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.OCR.Activities</AssemblyReference>
+      <AssemblyReference>System.Memory</AssemblyReference>
+      <AssemblyReference>System.Reflection.Metadata</AssemblyReference>
+      <AssemblyReference>System.ServiceModel</AssemblyReference>
+      <AssemblyReference>Microsoft.Bcl.AsyncInterfaces</AssemblyReference>
+      <AssemblyReference>System.ValueTuple</AssemblyReference>
+      <AssemblyReference>System.ComponentModel.Composition</AssemblyReference>
+      <AssemblyReference>UiPath.Excel</AssemblyReference>
+      <AssemblyReference>UiPath.Excel.Activities.Design</AssemblyReference>
+    </sco:Collection>
+  </TextExpression.ReferencesForImplementation>
+  <Sequence DisplayName="myntra" sap:VirtualizedContainerService.HintSize="594,4642" sap2010:WorkflowViewState.IdRef="Sequence_1">
+    <sap:WorkflowViewStateService.ViewState>
+      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+        <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+      </scg:Dictionary>
+    </sap:WorkflowViewStateService.ViewState>
+    <Sequence DisplayName="Myntra Workflow" sap:VirtualizedContainerService.HintSize="552,4550" sap2010:WorkflowViewState.IdRef="Sequence_4">
+      <sap:WorkflowViewStateService.ViewState>
+        <scg:Dictionary x:TypeArguments="x:String, x:Object">
+          <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+        </scg:Dictionary>
+      </sap:WorkflowViewStateService.ViewState>
+      <ui:KillProcess AppliesTo="{x:Null}" ContinueOnError="{x:Null}" Process="{x:Null}" DisplayName="Kill Process" sap:VirtualizedContainerService.HintSize="510,132" sap2010:WorkflowViewState.IdRef="KillProcess_1" ProcessName="explore" />
+      <uix:NApplicationCard AttachMode="ByInstance" DisplayName="Use Browser Chrome: Online Shopping for Women, Men, Kids Fashion &amp; Lifestyle - Myntra" sap:VirtualizedContainerService.HintSize="510,4286" sap2010:WorkflowViewState.IdRef="NApplicationCard_1" InteractionMode="DebuggerApi" ScopeGuid="a68fed1b-39c9-4c4b-b10b-597465c6f358" Version="V1">
+        <uix:NApplicationCard.Body>
+          <ActivityAction x:TypeArguments="x:Object">
+            <ActivityAction.Argument>
+              <DelegateInArgument x:TypeArguments="x:Object" Name="WSSessionData" />
+            </ActivityAction.Argument>
+            <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="476,4030" sap2010:WorkflowViewState.IdRef="Sequence_3">
+              <Sequence.Variables>
+                <Variable x:TypeArguments="x:String" Name="str_productName" />
+                <Variable x:TypeArguments="x:String" Name="str_Name" />
+                <Variable x:TypeArguments="x:String" Name="str_Price" />
+                <Variable x:TypeArguments="x:String" Name="str_Rating" />
+              </Sequence.Variables>
+              <sap:WorkflowViewStateService.ViewState>
+                <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                  <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                </scg:Dictionary>
+              </sap:WorkflowViewStateService.ViewState>
+              <ui:MaximizeWindow Window="{x:Null}" DisplayName="Maximize Window" sap:VirtualizedContainerService.HintSize="434,22" sap2010:WorkflowViewState.IdRef="MaximizeWindow_1" />
+              <uix:NTypeInto ActivateBefore="True" ClickBeforeMode="Single" DisplayName="Type Into 'INPUT'" EmptyFieldMode="SingleLine" sap:VirtualizedContainerService.HintSize="434,216" sap2010:WorkflowViewState.IdRef="NTypeInto_1" ScopeIdentifier="a68fed1b-39c9-4c4b-b10b-597465c6f358" Text="[in_productName]" Version="V1">
+                <uix:NTypeInto.Target>
+                  <uix:TargetAnchorable BrowserURL="https://www.flipkart.com/" DesignTimeRectangle="825, 99, 325, 40" ElementType="InputBox" FriendlyName="'INPUT'" FullSelectorArgument="&lt;webctrl tag='INPUT' /&gt;" FuzzySelectorArgument="&lt;webctrl tag='INPUT' type='text' aaname='Search for products, brands and more' /&gt;" Guid="32418156-f1c5-434b-8970-2a7311d77e8e" ImageBase64="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" InformativeScreenshot="9f0c10f3b34dc67a04b092c4541cfb87.png" ScopeSelectorArgument="&lt;html app='chrome.exe' title='Online Shopping Site for Mobiles, Electronics, Furniture, Grocery, Lifestyle, Books &amp;amp; More. Best Offers!' /&gt;" SearchSteps="Selector, FuzzySelector, Image">
+                    <uix:TargetAnchorable.PointOffset>
+                      <uix:PointOffset X="6" Y="2" />
+                    </uix:TargetAnchorable.PointOffset>
+                  </uix:TargetAnchorable>
+                </uix:NTypeInto.Target>
+              </uix:NTypeInto>
+              <uix:NClick ClickType="Single" DisplayName="Click 'PATH'" sap:VirtualizedContainerService.HintSize="434,156" sap2010:WorkflowViewState.IdRef="NClick_3" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="a68fed1b-39c9-4c4b-b10b-597465c6f358" Version="V1">
+                <uix:NClick.Target>
+                  <uix:TargetAnchorable BrowserURL="https://www.myntra.com/" DesignTimeRectangle="1318, 145, 14, 14" ElementType="Icon" FriendlyName="'PATH'" FullSelectorArgument="&lt;webctrl aaname=' ' parentid='iz-news-hub-title-container' tag='path' /&gt;" FuzzySelectorArgument="&lt;webctrl aaname=' ' parentid='iz-news-hub-title-container' tag='path' type='' /&gt;" Guid="5ee519bd-b219-4aec-b7a5-a4a7760bc5af" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAABIAAAASCAYAAABWzo5XAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAADbSURBVDhPrZNNCsIwEEa9iGcQBTe68HSuFUE8kfiDFxBd2NaVCnqA0DFPmbS2IVbMwEfbzJeXZNJptcdGYig+aLQwsjzl0pnUTVXh2aS5DOfFmAOtk1yIw1WkOy0MVZE73l5WWdk5Ou5A/ZmR8+NtSO5+GGPkCLzM0dxHjUiokWfZGMqhWrF9q6Jvu62BUK9Uh9ROVEiofl4Q4mYURvAeutHGoP0l/Gt4QWxfIZk9FiJ+OlqUYjNBITz5bpJDDtRkVd9uNedA0VqEpt1lzZt2a5t24GvafxUJZOQJcnWtYAN/yHIAAAAASUVORK5CYII=" InformativeScreenshot="bd07d34826bef6ab88065d95faa81e55.png" ScopeSelectorArgument="&lt;html app='chrome.exe' title='Online Shopping for Women, Men, Kids Fashion &amp;amp; Lifestyle - Myntra' /&gt;" SearchSteps="Selector, FuzzySelector, Image" />
+                </uix:NClick.Target>
+              </uix:NClick>
+              <uix:NClick ClickType="Single" DisplayName="Click 'A'" sap:VirtualizedContainerService.HintSize="434,156" sap2010:WorkflowViewState.IdRef="NClick_1" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="a68fed1b-39c9-4c4b-b10b-597465c6f358" Version="V1">
+                <uix:NClick.Target>
+                  <uix:TargetAnchorable BrowserURL="https://www.myntra.com/" DesignTimeRectangle="784, 148, 41, 40" FriendlyName="'A'" FullSelectorArgument="&lt;webctrl css-selector='body&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;header&amp;gt;div&amp;gt;div&amp;gt;a' idx='4' tag='A' /&gt;" FuzzySelectorArgument="&lt;webctrl type='' aaname='' tag='A' /&gt;" Guid="0317b419-5fcd-4743-927d-6c3fd10d7611" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAAC0AAAAsCAYAAADxRjE/AAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAGaSURBVGhD7dnPSwJBFMDx/s5KL0V60UBrLQjKX9QhLIQMyjBW2ErCzBI65JLj5kH2f3r5JmZJepTbDtMOzOELOm8WPi46HnbJ933QLf3R0+kUJpMJeN57rAvQCKY2xLEArcMdFgVoahjXDFpVBq0qg1aVQatKOno4dMG2HWict8Bu3wBjY3JflKSiU+kCLK9kvlWu1Mj9f00aOpnc5MBK9WRuPZfb5+v5reLcepSkoDOZPQ577D+T87PGJZ83r2xyHjYpaARZhRI5E6XSFmykLHIWNmno7kOfnInq9Qu+j5qFTRq613siZyL8asQO3Wy2yZloZ7cKiWSWnIVNCnptPf/jXXTdNz6XdfRJQQ8GLxyFP7TRiM3NXmd/NngcYl/XoyQFjd3e3XM4lpgBt63P8xlD8Goiy18z5pHXh0kaGmOMweHRaYDFWtcOjMceHBSP+XvEU9eGSSr6t0rlWgDHD0LtWSSlaEzAO50uOV8k5WjMcTrk+qL9CzpqBq0qg1aVQavKoFWlN1rLxxdaPigScK0eyemUhmgfPgAmDVcuJLNCEwAAAABJRU5ErkJggg==" InformativeScreenshot="7628cf063bb0294b4ff0f16c01853c38.png" ScopeSelectorArgument="&lt;html app='chrome.exe' title='Online Shopping for Women, Men, Kids Fashion &amp;amp; Lifestyle - Myntra' /&gt;" SearchSteps="Selector, FuzzySelector, Image" />
+                </uix:NClick.Target>
+              </uix:NClick>
+              <uix:NGetText DisplayName="Get Text 'OnePlus'" sap:VirtualizedContainerService.HintSize="434,156" sap2010:WorkflowViewState.IdRef="NGetText_5" ScopeIdentifier="a68fed1b-39c9-4c4b-b10b-597465c6f358" Version="V1">
+                <uix:NGetText.Target>
+                  <uix:TargetAnchorable BrowserURL="https://www.myntra.com/bluetooth-earphones" DesignTimeRectangle="298, 538, 190, 16" FriendlyName="'OnePlus'" FullSelectorArgument="&lt;webctrl tag='H3' class='product-brand' isleaf='1' parentclass='product-productMetaInfo' parentid='desktopSearchResults' idx='1' /&gt;" FuzzySelectorArgument="&lt;webctrl tag='H3' class='product-brand' isleaf='1' parentclass='product-productMetaInfo' parentid='desktopSearchResults' type='' /&gt;" Guid="42ed59b6-faa7-460f-b924-54eb8838ac5a" ImageBase64="" InformativeScreenshot="d919e8f710c037099d247a0dc268c650.png" ScopeSelectorArgument="&lt;html app='chrome.exe' title='Buy Bluetooth Earphones Online in India | Myntra' /&gt;" SearchSteps="Selector, FuzzySelector" />
+                </uix:NGetText.Target>
+                <uix:NGetText.Text>
+                  <OutArgument x:TypeArguments="x:String">[out_BrandName]</OutArgument>
+                </uix:NGetText.Text>
+              </uix:NGetText>
+              <uix:NGetText DisplayName="Get Text 'Fire-Boltt'" sap:VirtualizedContainerService.HintSize="434,156" sap2010:WorkflowViewState.IdRef="NGetText_6" ScopeIdentifier="a68fed1b-39c9-4c4b-b10b-597465c6f358" Version="V1">
+                <uix:NGetText.Target>
+                  <uix:TargetAnchorable BrowserURL="https://www.myntra.com/fire-boltt-square-smart-watches?extra_search_param=isautosuggestentry%3atrue%3a%3aid%3a2297-fire-boltt-square-smart-watches&amp;rawQuery=Fire-Boltt%20Square%20Smart%20Watches" DesignTimeRectangle="575, 534, 190, 16" FriendlyName="'Fire-Boltt'" FullSelectorArgument="&lt;webctrl tag='H3' class='product-brand' isleaf='1' parentclass='product-productMetaInfo' parentid='desktopSearchResults' idx='2' /&gt;" FuzzySelectorArgument="&lt;webctrl tag='H3' class='product-brand' isleaf='1' parentclass='product-productMetaInfo' parentid='desktopSearchResults' type='' /&gt;" Guid="98bda27f-b409-4992-a414-8d8ee665c6cd" ImageBase64="" InformativeScreenshot="e12ddb8fd2cd54548cc0d1ce62df6dfb.png" ScopeSelectorArgument="&lt;html app='chrome.exe' title='Fire Boltt Square Smart Watches - Buy Fire Boltt Square Smart Watches online in India' /&gt;" SearchSteps="Selector, FuzzySelector" />
+                </uix:NGetText.Target>
+                <uix:NGetText.Text>
+                  <OutArgument x:TypeArguments="x:String">[out_BrandName2]</OutArgument>
+                </uix:NGetText.Text>
+              </uix:NGetText>
+              <uix:NGetText DisplayName="Get Text 'Name'" sap:VirtualizedContainerService.HintSize="434,156" sap2010:WorkflowViewState.IdRef="NGetText_4" ScopeIdentifier="a68fed1b-39c9-4c4b-b10b-597465c6f358" Version="V1">
+                <uix:NGetText.Target>
+                  <uix:TargetAnchorable BrowserURL="https://www.myntra.com/bluetooth-earphones" DesignTimeRectangle="298, 521, 190, 14" FriendlyName="'Bullets Z2'" FullSelectorArgument="&lt;webctrl tag='H4' class='product-product' isleaf='1' parentclass='product-productMetaInfo' parentid='desktopSearchResults' idx='1' /&gt;" FuzzySelectorArgument="&lt;webctrl tag='H4' class='product-product' isleaf='1' parentclass='product-productMetaInfo' parentid='desktopSearchResults' type='' /&gt;" Guid="f31051d0-8b3d-44d8-8e13-ad8239728156" ImageBase64="" InformativeScreenshot="4f49f75d844de11a45136fa930b61a2b.png" ScopeSelectorArgument="&lt;html app='chrome.exe' title='Buy Bluetooth Earphones Online in India | Myntra' /&gt;" SearchSteps="Selector, FuzzySelector" />
+                </uix:NGetText.Target>
+                <uix:NGetText.Text>
+                  <OutArgument x:TypeArguments="x:String">[out_Name]</OutArgument>
+                </uix:NGetText.Text>
+              </uix:NGetText>
+              <uix:NGetText DisplayName="Get Text 'Ninja Fit Smartwatch'" sap:VirtualizedContainerService.HintSize="434,156" sap2010:WorkflowViewState.IdRef="NGetText_7" ScopeIdentifier="a68fed1b-39c9-4c4b-b10b-597465c6f358" Version="V1">
+                <uix:NGetText.Target>
+                  <uix:TargetAnchorable BrowserURL="https://www.myntra.com/fire-boltt-square-smart-watches?extra_search_param=isautosuggestentry%3atrue%3a%3aid%3a2297-fire-boltt-square-smart-watches&amp;rawQuery=Fire-Boltt%20Square%20Smart%20Watches" DesignTimeRectangle="8, 79, 0, 0" FriendlyName="'Ninja Fit Smartwatch'" FullSelectorArgument="&lt;webctrl tag='H4' class='product-product' isleaf='1' parentclass='product-productMetaInfo' parentid='desktopSearchResults' idx='2' /&gt;" FuzzySelectorArgument="&lt;webctrl tag='H4' class='product-product' isleaf='1' parentclass='product-productMetaInfo' parentid='desktopSearchResults' type='' /&gt;" Guid="d9830b58-7cd7-449f-a285-b7b2a54b675d" ImageBase64="" InformativeScreenshot="292d4a6bd15153e4fe2a41979f429c36.png" ScopeSelectorArgument="&lt;html app='chrome.exe' title='Fire Boltt Square Smart Watches - Buy Fire Boltt Square Smart Watches online in India' /&gt;" SearchSteps="Selector, FuzzySelector" />
+                </uix:NGetText.Target>
+                <uix:NGetText.Text>
+                  <OutArgument x:TypeArguments="x:String">[out_Name2]</OutArgument>
+                </uix:NGetText.Text>
+              </uix:NGetText>
+              <uix:NGetText DisplayName="Get Text 'Price'" sap:VirtualizedContainerService.HintSize="434,156" sap2010:WorkflowViewState.IdRef="NGetText_2" ScopeIdentifier="a68fed1b-39c9-4c4b-b10b-597465c6f358" Version="V1">
+                <uix:NGetText.Target>
+                  <uix:TargetAnchorable BrowserURL="https://www.myntra.com/firebolt-smart-watch-?extra_search_param=isautosuggestentry%3atrue%3a%3aid%3a2297-firebolt-smart-watch&amp;rawQuery=Firebolt%20Smart%20Watch%20" DesignTimeRectangle="298, 627, 50, 18" ElementType="Text" FriendlyName="'Rs. 1299'" FullSelectorArgument="&lt;webctrl parentid='desktopSearchResults' tag='SPAN' class='product-discountedPrice' isleaf='1' parentclass='product-price' idx='1' /&gt;" FuzzySelectorArgument="&lt;webctrl parentid='desktopSearchResults' tag='SPAN' class='product-discountedPrice' isleaf='1' parentclass='product-price' type='' /&gt;" Guid="cd7c8295-1abc-45b5-b9e3-6db03a7a80fc" ImageBase64="" InformativeScreenshot="c5aa500f69a72e8729571c30ab9e9345.png" ScopeSelectorArgument="&lt;html app='chrome.exe' title='Firebolt Smart Watch - Buy Firebolt Smart Watch online in India' /&gt;" SearchSteps="Selector, FuzzySelector" />
+                </uix:NGetText.Target>
+                <uix:NGetText.Text>
+                  <OutArgument x:TypeArguments="x:String">[out_Price]</OutArgument>
+                </uix:NGetText.Text>
+              </uix:NGetText>
+              <uix:NGetText DisplayName="Get Text 'Rs. 1399'" sap:VirtualizedContainerService.HintSize="434,156" sap2010:WorkflowViewState.IdRef="NGetText_8" ScopeIdentifier="a68fed1b-39c9-4c4b-b10b-597465c6f358" Version="V1">
+                <uix:NGetText.Target>
+                  <uix:TargetAnchorable BrowserURL="https://www.myntra.com/firebolt-smart-watch-?extra_search_param=isautosuggestentry%3atrue%3a%3aid%3a2297-firebolt-smart-watch&amp;rawQuery=Firebolt%20Smart%20Watch%20" DesignTimeRectangle="575, 627, 50, 18" ElementType="Text" FriendlyName="'Rs. 1399'" FullSelectorArgument="&lt;webctrl parentid='desktopSearchResults' tag='SPAN' class='product-discountedPrice' isleaf='1' parentclass='product-price' idx='2' /&gt;" FuzzySelectorArgument="&lt;webctrl parentid='desktopSearchResults' tag='SPAN' class='product-discountedPrice' isleaf='1' parentclass='product-price' type='' /&gt;" Guid="e4ff42a9-d889-4bcd-b977-0edb0ccf932e" ImageBase64="" InformativeScreenshot="de40428af0fd0ef61502fbb3f9794b96.png" ScopeSelectorArgument="&lt;html app='chrome.exe' title='Firebolt Smart Watch - Buy Firebolt Smart Watch online in India' /&gt;" SearchSteps="Selector, FuzzySelector" />
+                </uix:NGetText.Target>
+                <uix:NGetText.Text>
+                  <OutArgument x:TypeArguments="x:String">[out_Price2]</OutArgument>
+                </uix:NGetText.Text>
+              </uix:NGetText>
+              <uix:NGetAttribute Attribute="innertext" DisplayName="Get Attribute 'Rating'" sap:VirtualizedContainerService.HintSize="434,206" sap2010:WorkflowViewState.IdRef="NGetAttribute_1" ScopeIdentifier="a68fed1b-39c9-4c4b-b10b-597465c6f358" Version="V1">
+                <uix:NGetAttribute.Result>
+                  <OutArgument x:TypeArguments="x:String">[out_Rating]</OutArgument>
+                </uix:NGetAttribute.Result>
+                <uix:NGetAttribute.Target>
+                  <uix:TargetAnchorable BrowserURL="https://www.myntra.com/bluetooth-earphones" DesignTimeRectangle="302, 462, 6, 15" ElementType="Text" FriendlyName="'4'" FullSelectorArgument="&lt;webctrl parentid='desktopSearchResults' tag='SPAN' isleaf='1' parentclass='product-ratingsContainer' idx='1' /&gt;" FuzzySelectorArgument="&lt;webctrl parentid='desktopSearchResults' tag='SPAN' isleaf='1' parentclass='product-ratingsContainer' type='' aaname='4' check:text='4' /&gt;" Guid="f071269f-4d35-40e8-bab5-547ec0ea2778" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAAAoAAAATCAYAAACp65zuAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAACaSURBVDhP3c89CsQgEIZhD5FzCDZCjqE3SJ1SECRNwNpzxNYDBIJio97pW5Jmf0jClssWbzM8MzCktYZv+m+4riu01jDGIMZ4DmutUEqh6zr0fX8sncJlWcAYwzAM1zClBCEExnHEPM/X0DkHSim895imCZxzhBBQSnnCnDOklCCEvPV69YD7E9u2HcO9y4ufWWvvv77r92HDA93NWAFrUGEDAAAAAElFTkSuQmCC" InformativeScreenshot="ea8f794288dde5af44dac660625cc025.png" ScopeSelectorArgument="&lt;html app='chrome.exe' title='Buy Bluetooth Earphones Online in India | Myntra' /&gt;" SearchSteps="Selector, FuzzySelector, Image" />
+                </uix:NGetAttribute.Target>
+              </uix:NGetAttribute>
+              <uix:NGetAttribute Attribute="text" DisplayName="Get Attribute '3.7'" sap:VirtualizedContainerService.HintSize="434,206" sap2010:WorkflowViewState.IdRef="NGetAttribute_2" ScopeIdentifier="a68fed1b-39c9-4c4b-b10b-597465c6f358" Version="V1">
+                <uix:NGetAttribute.Result>
+                  <OutArgument x:TypeArguments="x:String">[out_Rating2]</OutArgument>
+                </uix:NGetAttribute.Result>
+                <uix:NGetAttribute.Target>
+                  <uix:TargetAnchorable BrowserURL="https://www.myntra.com/fire-boltt-square-smart-watches?extra_search_param=isautosuggestentry%3atrue%3a%3aid%3a2297-fire-boltt-square-smart-watches&amp;rawQuery=Fire-Boltt%20Square%20Smart%20Watches" DesignTimeRectangle="579, 497, 16, 15" ElementType="Text" FriendlyName="'3.7'" FullSelectorArgument="&lt;webctrl parentid='desktopSearchResults' tag='SPAN' isleaf='1' parentclass='product-ratingsContainer' idx='3' /&gt;" FuzzySelectorArgument="&lt;webctrl parentid='desktopSearchResults' tag='SPAN' isleaf='1' parentclass='product-ratingsContainer' type='' aaname='3.7' check:text='3.7' /&gt;" Guid="ca1005b3-bdb1-4e4e-8bf0-2077d541951e" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAABQAAAATCAYAAACQjC21AAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAFeSURBVDhP7ZI/q4JgFIed+wZ9gSaXCKTEIQgdgiBaFJtEkJZchGhqqyWKhpYmtzanhiQoIrQi/U6/y3lB6b1279K9073Ds5xzfN7zRyFNU/wk/8L3+T1hkiTYbrcwDAPNZhOTyQRxHBc+8H0fw+GQYzqd4na7sXwuPB6PUFUV/X4flmWhXC5jNBpxMmKxWKBerzOq1SpKpRJc18Xj8WB5buT7/c46jaII3W4XpmnmL79iNptB0zScTqc8VtjharViMlEU2Xif8xlhGLIu1+s1Fy8I5/M5ZFlmws1mw+WeWS6XqNVq2O/3XLwgJGhsx3GgKAo3Tgbti/bc6/UKh8uFh8MBtm0jCALsdjt0Oh20Wi2cz2eMx2NIksTiVHu5XNButzEYDDgZkQupE13X2dUEQWAXpB1St57noVKpsMeolv6IRqPxvTCDrkpdkSiL0YjX65Wr+4qXO3yHPydM8QE0OLc/4nwSYAAAAABJRU5ErkJggg==" InformativeScreenshot="84461c95685f1fc6e150ef176fc0c29a.png" ScopeSelectorArgument="&lt;html app='chrome.exe' title='Fire Boltt Square Smart Watches - Buy Fire Boltt Square Smart Watches online in India' /&gt;" SearchSteps="Selector, FuzzySelector, Image" />
+                </uix:NGetAttribute.Target>
+              </uix:NGetAttribute>
+              <ui:ExcelApplicationScope Password="{x:Null}" DisplayName="Excel Application Scope" sap:VirtualizedContainerService.HintSize="434,1558" sap2010:WorkflowViewState.IdRef="ExcelApplicationScope_1" InstanceCachePeriod="3000" WorkbookPath="Product_Details.xlsx">
+                <ui:ExcelApplicationScope.Body>
+                  <ActivityAction x:TypeArguments="ui:WorkbookApplication">
+                    <ActivityAction.Argument>
+                      <DelegateInArgument x:TypeArguments="ui:WorkbookApplication" Name="ExcelWorkbookScope" />
+                    </ActivityAction.Argument>
+                    <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="376,1449" sap2010:WorkflowViewState.IdRef="Sequence_5">
+                      <sap:WorkflowViewStateService.ViewState>
+                        <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                          <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                        </scg:Dictionary>
+                      </sap:WorkflowViewStateService.ViewState>
+                      <ui:ExcelWriteCell Cell="A4" DisplayName="Write Cell" sap:VirtualizedContainerService.HintSize="334,87" sap2010:WorkflowViewState.IdRef="ExcelWriteCell_1" SheetName="Sheet1" Text="Name : Product Details from Myntra" />
+                      <ui:ExcelWriteCell Cell="Q4" DisplayName="Write Cell" sap:VirtualizedContainerService.HintSize="334,87" sap2010:WorkflowViewState.IdRef="ExcelWriteCell_2" SheetName="Sheet1" Text="Price" />
+                      <ui:ExcelWriteCell Cell="R4" DisplayName="Write Cell" sap:VirtualizedContainerService.HintSize="334,87" sap2010:WorkflowViewState.IdRef="ExcelWriteCell_3" SheetName="Sheet1" Text="Ratings " />
+                      <ui:ExcelWriteCell Cell="A5" DisplayName="Write Cell" sap:VirtualizedContainerService.HintSize="334,87" sap2010:WorkflowViewState.IdRef="ExcelWriteCell_4" SheetName="Sheet1" Text="[out_BrandName]" />
+                      <ui:ExcelWriteCell Cell="B5" DisplayName="Write Cell" sap:VirtualizedContainerService.HintSize="334,87" sap2010:WorkflowViewState.IdRef="ExcelWriteCell_5" SheetName="Sheet1" Text="[out_Name]" />
+                      <ui:ExcelWriteCell Cell="Q5" DisplayName="Write Cell" sap:VirtualizedContainerService.HintSize="334,87" sap2010:WorkflowViewState.IdRef="ExcelWriteCell_6" SheetName="Sheet1" Text="[out_Price]" />
+                      <ui:ExcelWriteCell Cell="R5" DisplayName="Write Cell" sap:VirtualizedContainerService.HintSize="334,87" sap2010:WorkflowViewState.IdRef="ExcelWriteCell_7" SheetName="Sheet1" Text="[out_Rating+&quot; out of 5&quot;]" />
+                      <ui:ExcelWriteCell Cell="A6" DisplayName="Write Cell" sap:VirtualizedContainerService.HintSize="334,87" sap2010:WorkflowViewState.IdRef="ExcelWriteCell_8" SheetName="Sheet1" Text="[out_BrandName2]" />
+                      <ui:ExcelWriteCell Cell="B6" DisplayName="Write Cell" sap:VirtualizedContainerService.HintSize="334,87" sap2010:WorkflowViewState.IdRef="ExcelWriteCell_9" SheetName="Sheet1" Text="[out_Name2]" />
+                      <ui:ExcelWriteCell Cell="Q6" DisplayName="Write Cell" sap:VirtualizedContainerService.HintSize="334,87" sap2010:WorkflowViewState.IdRef="ExcelWriteCell_10" SheetName="Sheet1" Text="[out_Price2]" />
+                      <ui:ExcelWriteCell Cell="R6" DisplayName="Write Cell" sap:VirtualizedContainerService.HintSize="334,87" sap2010:WorkflowViewState.IdRef="ExcelWriteCell_11" SheetName="Sheet1" Text="[out_Rating2+&quot; out of 5&quot;]" />
+                    </Sequence>
+                  </ActivityAction>
+                </ui:ExcelApplicationScope.Body>
+              </ui:ExcelApplicationScope>
+            </Sequence>
+          </ActivityAction>
+        </uix:NApplicationCard.Body>
+        <uix:NApplicationCard.TargetApp>
+          <uix:TargetApp Area="-8, -8, 1382, 784" BrowserType="Chrome" IconBase64="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" InformativeScreenshot="56554ca8dec873f8f3399208c646a2a9.png" Selector="&lt;html app='chrome.exe' title='Online Shopping for Women, Men, Kids Fashion &amp;amp; Lifestyle - Myntra'/&gt;" Url="www.myntra.com&#xA;" />
+        </uix:NApplicationCard.TargetApp>
+      </uix:NApplicationCard>
+    </Sequence>
+  </Sequence>
+</Activity>
